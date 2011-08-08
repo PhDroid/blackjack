@@ -1,13 +1,13 @@
 package com.phdroid.blackjack.ui;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.MotionEvent;
-import com.phdroid.smsb.activity.base.ActivityBase;
 
 /**
  * Injects Activity methods with events.
  */
-public class EventInjectedActivity extends ActivityBase {
+public class EventInjectedActivity extends Activity {
 	private OnCreateCall onCreateEventCall = null;
 	private OnTouchCall onTouchEventCall = null;
 

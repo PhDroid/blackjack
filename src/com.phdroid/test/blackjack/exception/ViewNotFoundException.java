@@ -1,4 +1,4 @@
-package com.phdroid.test.blackjack.exceptions;
+package com.phdroid.test.blackjack.exception;
 
 /**
  * Used for throwing when view id is incorrect.

@@ -6,7 +6,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import com.phdroid.smsb.R;
-import com.phdroid.smsb.activity.BlockedSmsListActivity;
 
 /**
  * Handles tray notification.
@@ -62,7 +61,7 @@ public class TrayNotificationManager {
 
 	public void cancelAll() {
 		NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
-		for (TrayNotification notification: NotificationContainer.getInstance()){
+		for (TrayNotification notification : NotificationContainer.getInstance()) {
 			notificationManager.cancel(notification.getId());
 		}
 	}

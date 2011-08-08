@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
-import com.phdroid.test.blackjack.exceptions.ViewNotFoundException;
+import com.phdroid.test.blackjack.exception.ViewNotFoundException;
 import junit.framework.Assert;
 
 /**
@@ -37,8 +37,7 @@ public class Solo {
 		Assert.assertTrue(message, activityClass == getCurrentActivity().getClass());
 	}
 
-	public boolean waitForActivity(String name, int timeout)
-	{
+	public boolean waitForActivity(String name, int timeout) {
 		return utils.waitForActivity(name, timeout);
 	}
 
@@ -71,12 +70,12 @@ public class Solo {
 	public void clickOnSpinner(int id) throws ViewNotFoundException {
 		final Spinner s = getSpinner(id);
 		getCurrentActivity().runOnUiThread(
-            new Runnable() {
-                public void run() {
-					s.requestFocus();
-	                //s.performClick();
-                }
-            }
+				new Runnable() {
+					public void run() {
+						s.requestFocus();
+						//s.performClick();
+					}
+				}
 		);
 	}
 
@@ -96,10 +95,10 @@ public class Solo {
 			if (adapter.getItem(i).equals(item)) {
 				final int index = i;
 				getCurrentActivity().runOnUiThread(new Runnable() {
-                    public void run() {
+					public void run() {
 						s.setSelection(index);
-                    }
-                });
+					}
+				});
 				break;
 			}
 		}
